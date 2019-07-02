@@ -59,11 +59,6 @@ void loop(){
 }*/
 #include <Servo.h> //Comienzo de trabajo en comandos 
  
- #define pinBase 12
- #define pinDerecho 11
- #define pinIzquierdo 10
- #define pinMano 9
- 
  Servo motorBase;
  Servo motorDerecho;
  Servo motorIzquierdo;
@@ -72,41 +67,40 @@ void loop(){
  void setup ()
  {
   Serial.begin (9600);
-  motorBase.attach (pinBase);
-  motorDerecho.attach (pinDerecho);
-  motorIzquierdo.attach (pinIzquierdo);
-  motorMano.attach (pinMano);
+  motorBase.attach (12);
+  motorDerecho.attach (11);
+  motorIzquierdo.attach (10);
+  motorMano.attach (9);
  }
- int m;
- int Base, Mano, Derecho, Izquierdo;
+ int m,j,c;
  char s[4];
  
 void loop (){
   if (Serial.available ()>0&& Serial.available ()<4)
   {
     Serial.readBytes (s,4);
-    Serial.println (s);
-  }
-  
-   switch (s[0])
+    
+    switch (s[0])
   {
    case 'b':
-   pinBase;
+   m= ((s[1]-48)*100)+((s[2]-48)*10)+((s[3]-48));
+   motorBase.write (m);
    break; 
+   
    case 'g':
-   pinMano;
+   m= ((s[1]-48)*100)+((s[2]-48)*10)+((s[3]-48));
+   motorMano.write (m);
    break;
+   
    case 'd':
-   pinDerecho;
+   m= ((s[1]-48)*100)+((s[2]-48)*10)+((s[3]-48));
+   motorDerecho.write (m);
    break;
+   
    case 'i':
-   pinIzquierdo;
+   m= ((s[1]-48)*100)+((s[2]-48)*10)+((s[3]-48));
+   motorIzquierdo.write (m);
    break;
   }
-  motorBase.write (pinBase);
-  motorDerecho.write (pinDerecho);
-  motorIzquierdo.write (pinIzquierdo);
-  motorMano.write (pinMano);
-  m=((s[1]*100)+(s[2]*10)+(s[3]));
-  
+}
 }
