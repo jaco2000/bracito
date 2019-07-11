@@ -57,7 +57,7 @@ void loop(){
   motorMano.write (10); //Cerrar Mano
   delay (2000); // Tiempo para repetir el proceso
 }*/
-#include <Servo.h> //Comienzo de trabajo en comandos 
+/*#include <Servo.h> //Comienzo de trabajo en comandos 
  
  Servo motorBase;
  Servo motorDerecho;
@@ -87,6 +87,58 @@ void loop (){
    motorBase.write (m);
    break; 
    
+   case 'm':
+   m= ((s[1]-48)*100)+((s[2]-48)*10)+((s[3]-48));
+   delay (0);
+   motorMano.write (m);
+   break;
+   
+   case 'd':
+   m= ((s[1]-48)*100)+((s[2]-48)*10)+((s[3]-48));
+   motorDerecho.write (m);
+   break;
+   
+   case 'i':
+   m= ((s[1]-48)*100)+((s[2]-48)*10)+((s[3]-48));
+   motorIzquierdo.write (m);
+   break;
+  }
+}
+}/*
+
+*/
+#include <Servo.h>//Comienzo de trabajo con bluetooh 
+#include <SoftwareSerial.h>
+SoftwareSerial BT (2,3);
+ 
+ Servo motorBase;
+ Servo motorDerecho;
+ Servo motorIzquierdo;
+ Servo motorMano;
+
+ void setup ()
+ {
+  BT.begin (9600);
+  /*Serial.begin (9600);*/
+  motorBase.attach (12);
+  motorDerecho.attach (11);
+  motorIzquierdo.attach (10);
+  motorMano.attach (9);
+ }
+ int m,j,c;
+ char s[4];
+ 
+void loop (){
+  if (BT.available ()>0&& BT.available ()<4)
+   BT.readBytes (s,4);
+   { 
+    switch (s[0])
+  {
+   case 'b':
+   m= ((s[1]-48)*100)+((s[2]-48)*10)+((s[3]-48));
+   motorBase.write (m);
+   break; 
+   
    case 'g':
    m= ((s[1]-48)*100)+((s[2]-48)*10)+((s[3]-48));
    motorMano.write (m);
@@ -104,3 +156,4 @@ void loop (){
   }
 }
 }
+ 
