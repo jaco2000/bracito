@@ -104,9 +104,9 @@ void loop (){
    break;
   }
 }
-}/*
+}*/
 
-*/
+
 #include <Servo.h>//Comienzo de trabajo con bluetooh 
 #include <SoftwareSerial.h>
 SoftwareSerial BT (2,3);
@@ -125,6 +125,7 @@ SoftwareSerial BT (2,3);
   motorIzquierdo.attach (10);
   motorMano.attach (9);
  }
+ 
  int m,j,c;
  char s[4];
  
@@ -153,6 +154,483 @@ void loop (){
    m= ((s[1]-48)*100)+((s[2]-48)*10)+((s[3]-48));
    motorIzquierdo.write (m);
    break;
+
+      case 'y'://1-1-1
+   motorMano.write (55);//primer cubo
+delay (1000);
+motorBase.write (45);
+delay  (1000);
+motorIzquierdo.write (115);
+motorDerecho.write (135);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//segundo cubo
+delay (1000);
+motorBase.write (90);
+delay  (1000);
+motorIzquierdo.write (100);
+motorDerecho.write (125);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//tercer Cubo
+delay (1000);
+motorBase.write (135);
+delay  (1000);
+motorIzquierdo.write (130);
+motorDerecho.write (150);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);
+   break;
+
+   case 'a'://0-0-3
+   motorMano.write (65);
+delay (1000);
+motorBase.write (45);
+delay  (1000);
+motorIzquierdo.write (115);
+motorDerecho.write (135);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//Primer Cubo
+delay (1000);
+motorBase.write (45);
+delay  (1000);
+motorIzquierdo.write (125);
+motorDerecho.write (135);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//Segundo Cubo
+delay (1000);
+motorBase.write (45);
+delay  (1000);
+motorIzquierdo.write (140);
+motorDerecho.write (135);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);
+   break;
+   
+   case 'e'://0-1-2
+motorMano.write (65);
+delay (1000);
+motorBase.write (45);
+delay  (1000);
+motorIzquierdo.write (115);
+motorDerecho.write (135);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//Primer Cubo
+delay (1000);
+motorBase.write (45);
+delay  (1000);
+motorIzquierdo.write (125);
+motorDerecho.write (135);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//Segundo Cubo
+delay (1000);
+motorBase.write (90);
+delay  (1000);
+motorIzquierdo.write (100);
+motorDerecho.write (125);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);
+   break;
+
+   case 'p'://0-2-1
+   motorMano.write (55);//Primer Cubo
+delay (1000);
+motorBase.write (90);
+delay  (1000);
+motorIzquierdo.write (100);
+motorDerecho.write (125);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//segundo cubo
+delay (1000);
+motorBase.write (90);
+delay  (1000);
+motorIzquierdo.write (105);
+motorDerecho.write (125);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (65);//Tercer cubo
+delay (1000);
+motorBase.write (45);
+delay  (1000);
+motorIzquierdo.write (115);
+motorDerecho.write (135);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);
+break;
+
+case 't': //0-3-0
+motorMano.write (55);//Primer Cubo
+delay (1000);
+motorBase.write (90);
+delay  (1000);
+motorIzquierdo.write (100);
+motorDerecho.write (125);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//segundo Cubo
+delay (1000);
+motorBase.write (90);
+delay  (1000);
+motorIzquierdo.write (105);
+motorDerecho.write (125);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//Tercer Cubo
+delay (1000);
+motorBase.write (90);
+delay  (1000);
+motorIzquierdo.write (115);
+motorDerecho.write (125);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+break;
+
+case 'z': //2-1-0
+motorMano.write (55);//Primer Cubo
+delay (1000);
+motorBase.write (90);
+delay  (1000);
+motorIzquierdo.write (100);
+motorDerecho.write (125);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//Segundo Cubo
+delay (1000);
+motorBase.write (135);
+delay  (1000);
+motorIzquierdo.write (130);
+motorDerecho.write (150);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);
+motorMano.write (55);//Tercer Cubo
+delay (1000);
+motorBase.write (135);
+delay  (1000);
+motorIzquierdo.write (135);
+motorDerecho.write (150);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);
+break;
+
+
+case 'l': //3-0-0
+motorMano.write (55);//Primer Cubo
+delay (1000);
+motorBase.write (135);
+delay  (1000);
+motorIzquierdo.write (130);
+motorDerecho.write (150);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//segundo Cubo
+delay (1000);
+motorBase.write (135);
+delay  (1000);
+motorIzquierdo.write (135);
+motorDerecho.write (150);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//Tercer Cubo
+delay (1000);
+motorBase.write (135);
+delay  (1000);
+motorIzquierdo.write (140);
+motorDerecho.write (150);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);
+break;
+
+
+
+case 's': //2-0-1
+motorMano.write (55);//Primer Cubo
+delay (1000);
+motorBase.write (135);
+delay  (1000);
+motorIzquierdo.write (130);
+motorDerecho.write (150);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//segundo Cubo
+delay (1000);
+motorBase.write (135);
+delay  (1000);
+motorIzquierdo.write (135);
+motorDerecho.write (150);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//tercer cubo
+delay (1000);
+motorBase.write (45);
+delay  (1000);
+motorIzquierdo.write (115);
+motorDerecho.write (135);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);
+break;
+
+case 'f': //1-2-0
+motorMano.write (55);//Primer Cubo
+delay (1000);
+motorBase.write (135);
+delay  (1000);
+motorIzquierdo.write (130);
+motorDerecho.write (150);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//Segundo Cubo
+delay (1000);
+motorBase.write (90);
+delay  (1000);
+motorIzquierdo.write (100);
+motorDerecho.write (125);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//tercer Cubo
+delay (1000);
+motorBase.write (90);
+delay  (1000);
+motorIzquierdo.write (105);
+motorDerecho.write (125);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);
+break;
+
+
+
+case 'u'://1-0-2
+motorMano.write (55);//Primer Cubo
+delay (1000);
+motorBase.write (135);
+delay  (1000);
+motorIzquierdo.write (130);
+motorDerecho.write (150);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//Segundo cubo
+delay (1000);
+motorBase.write (45);
+delay  (1000);
+motorIzquierdo.write (115);
+motorDerecho.write (135);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);//Tercer Cubo
+delay (1000);
+motorBase.write (45);
+delay  (1000);
+motorIzquierdo.write (125);
+motorDerecho.write (135);
+delay (1000);
+motorMano.write (80);
+delay (1000);
+motorBase.write (180);
+delay (1000);
+motorIzquierdo.write (65);
+motorDerecho.write (80);
+delay (1000);
+motorMano.write (55);
+break;
+
+case 'q'://stop
+delay (1000);
+motorBase.write(90);
+delay (1000);
+motorDerecho.write (90);
+motorIzquierdo.write (20);
+delay (1000);
+motorMano.write (65);
+delay (1000);
+
+
   }
 }
 }
